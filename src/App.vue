@@ -24,10 +24,18 @@ function calcular(){
 
 function escolha(op, e){
   if(op === "primeiro"){
-    values.primeiroNumero = parseInt(e.target.value)
+    if(e.target.value === ''){
+      values.primeiroNumero = 0
+    }else{
+      values.primeiroNumero = parseInt(e.target.value)
+    }
     calcular()
   }else if(op === "segundo"){
-    values.segundoNumero = parseInt(e.target.value)
+    if(e.target.value === ''){
+      values.segundoNumero = 0
+    }else{
+      values.segundoNumero = parseInt(e.target.value)
+    }
     calcular()
   }else if(op === "operacao"){
     values.operacao = e.target.value
